@@ -42,7 +42,7 @@ function civicrm_event_creator_manage_form($form, &$form_state) {
   }
   // Component for event_type_id.
   $form['event']['event_type_id'] = [
-    '#type' => 'radios',
+    '#type' => 'select',
     '#title' => t('Event type ID'),
     '#options' => _civicrm_event_creator_option_group('event_type'),
     '#default_value' => (isset($default['event_type_id']) ? $default['event_type_id'] : NULL),
@@ -50,7 +50,7 @@ function civicrm_event_creator_manage_form($form, &$form_state) {
   ];
   // Component for default_role_id.
   $form['event']['default_role_id'] = [
-    '#type' => 'radios',
+    '#type' => 'select',
     '#title' => t('Default role ID'),
     '#options' => _civicrm_event_creator_option_group('participant_role'),
     '#default_value' => (isset($default['default_role_id']) ? $default['default_role_id'] : NULL),
