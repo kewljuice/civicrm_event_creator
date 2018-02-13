@@ -280,7 +280,10 @@ function _civicrm_event_creator_option_group($name) {
   $values = [];
   try {
     civicrm_initialize();
-    $result = civicrm_api3('OptionValue', 'get', ['option_group_id' => $name,]);
+    $result = civicrm_api3('OptionValue', 'get', [
+      'option_group_id' => $name,
+      'is_active' => 1,
+    ]);
   } catch (Exception $e) {
     watchdog('_civicrm_event_creator_fetch_option_group', print_r($e, TRUE));
   }
