@@ -119,6 +119,7 @@ function civicrm_event_creator_manage_form($form, &$form_state) {
     ],
     '#default_value' => (isset($default['loc_block_id']) ? $default['loc_block_id'] : NULL),
     '#options' => _civicrm_event_loc_blocks(),
+    '#required' => TRUE,
   ];
   // Component for new location.
   $form['location']['new'] = [
