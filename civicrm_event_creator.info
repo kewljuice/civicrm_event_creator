@@ -1,0 +1,8 @@
+name = CiviCRM Event Creator
+description = "Everything functionally related to creating event(s) via Drupal form API"
+core = 7.x
+package = "CiviCRM"
+
+dependencies[] = "civicrm"
+dependencies[] = "date_popup"
+dependencies[] = "views"
