@@ -233,6 +233,8 @@ function civicrm_event_creator_manage_form_submit($form, &$form_state) {
   $params['is_active'] = FALSE;
   // Get value from description.
   $params['description'] = $params['description']['value'];
+  // Add possibility to extend this form submit.
+  drupal_alter('creator_extend_form_submit', $form_state, $params);
   // Check Location for 'new' address.
   if (isset($form_state['values']['location_check']) && $form_state['values']['location_check'] == 'new') {
     // Fetch submitted values for 'location'.

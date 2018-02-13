@@ -39,5 +39,11 @@ function my_module_creator_extend_form_alter(&$form, $default) {
     '#default_value' => (isset($default['custom_1']) ? $default['custom_1'] : NULL),
   ];
 }
-```
 
+/**
+ * Implements creator_extend_form_submit_alter().
+ */
+function my_module_creator_extend_form_alter(&$form_state, $params) {
+    $params['custom_1'] = strtoupper($params['custom_1']);
+}
+```
