@@ -336,13 +336,15 @@ function _civicrm_event_loc_blocks() {
   }
   if (!$location["is_error"]) {
     foreach ($location['values'] as $loc) {
-      try {
-        civicrm_initialize();
-        $address = civicrm_api3('Address', 'getSingle', ['id' => $loc['address_id'],]);
-      } catch (Exception $e) {
-        watchdog('_civicrm_event_loc_blocks', print_r($e, TRUE));
+      if (isset($loc['address_id'])) {
+        try {
+          civicrm_initialize();
+          $address = civicrm_api3('Address', 'getSingle', ['id' => $loc['address_id'],]);
+        } catch (Exception $e) {
+          watchdog('_civicrm_event_loc_blocks', print_r($e, TRUE));
+        }
+        $values[$loc['id']] = $address['name'];
       }
-      $values[$loc['id']] = $address['name'];
     }
   }
   // Return.
