@@ -19,7 +19,7 @@ function civicrm_event_creator_manage_form($form, &$form_state) {
     '#collapsed' => FALSE,
   ];
   $form['help']['text'] = [
-    '#markup' => t("Here you can create or edit a CiviCRM event"),
+    '#markup' => t("Here you can create or edit a CiviCRM event, or return to <a href='/admin/events/manage'>overview</a>"),
   ];
   // Event.
   $form['event'] = [
