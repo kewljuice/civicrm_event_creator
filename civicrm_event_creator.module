@@ -13,4 +13,5 @@ module_load_include('inc', 'civicrm_event_creator', 'includes/view');
 /**
  * Include form.
  */
-module_load_include('inc', 'civicrm_event_creator', 'includes/form');
+module_load_include('inc', 'civicrm_event_creator', 'includes/form_manage');
+module_load_include('inc', 'civicrm_event_creator', 'includes/form_template');

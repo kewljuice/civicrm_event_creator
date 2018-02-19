@@ -35,5 +35,14 @@ function civicrm_event_creator_menu() {
     'access arguments' => ['access civicrm_event_creator'],
     'type' => MENU_CALLBACK,
   ];
+  // Endpoint: edit event.
+  $items['admin/events/template'] = [
+    'title' => t('Events: create from template'),
+    'description' => "Create new CiviCRM event",
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['civicrm_event_creator_template_form'],
+    'access arguments' => ['access civicrm_event_creator'],
+    'type' => MENU_CALLBACK,
+  ];
   return $items;
 }

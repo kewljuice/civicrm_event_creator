@@ -87,7 +87,7 @@ function civicrm_event_creator_manage_form($form, &$form_state) {
     '#required' => TRUE,
     '#date_year_range' => 'now:+100',
   ];
-  // Component for start_date.
+  // Component for end_date.
   $form['event']['end_date'] = [
     '#type' => 'date_popup',
     '#title' => t('End date'),

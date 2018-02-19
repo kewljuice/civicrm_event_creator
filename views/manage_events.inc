@@ -25,31 +25,31 @@ $handler->display->display_options['pager']['options']['offset'] = '0';
 $handler->display->display_options['pager']['options']['id'] = '0';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
-'id' => 'id',
-'title' => 'title',
+  'id' => 'id',
+  'title' => 'title',
 );
 $handler->display->display_options['style_options']['default'] = '-1';
 $handler->display->display_options['style_options']['info'] = array(
-'id' => array(
-'sortable' => 0,
-'default_sort_order' => 'asc',
-'align' => '',
-'separator' => '',
-'empty_column' => 0,
-),
-'title' => array(
-'sortable' => 0,
-'default_sort_order' => 'asc',
-'align' => '',
-'separator' => '',
-'empty_column' => 0,
-),
+  'id' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'title' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
 );
 /* Header: Global: Text area */
 $handler->display->display_options['header']['area']['id'] = 'area';
 $handler->display->display_options['header']['area']['table'] = 'views';
 $handler->display->display_options['header']['area']['field'] = 'area';
-$handler->display->display_options['header']['area']['content'] = '<a href="/admin/events/create">Create event</a>';
+$handler->display->display_options['header']['area']['content'] = '<a href="/admin/events/create">Create event</a> | <a href="/admin/events/template">Create event from template</a>';
 $handler->display->display_options['header']['area']['format'] = 'filtered_html';
 /* Field: CiviCRM Events: Event ID */
 $handler->display->display_options['fields']['id']['id'] = 'id';
@@ -102,10 +102,10 @@ $handler->display->display_options['filters']['title']['expose']['label'] = 'Eve
 $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
 $handler->display->display_options['filters']['title']['expose']['identifier'] = 'key';
 $handler->display->display_options['filters']['title']['expose']['remember_roles'] = array(
-2 => '2',
-1 => 0,
-3 => 0,
-4 => 0,
+  2 => '2',
+  1 => 0,
+  3 => 0,
+  4 => 0,
 );
 /* Filter criterion: CiviCRM Events: Event Type */
 $handler->display->display_options['filters']['event_type']['id'] = 'event_type';
@@ -117,11 +117,16 @@ $handler->display->display_options['filters']['event_type']['expose']['label'] =
 $handler->display->display_options['filters']['event_type']['expose']['operator'] = 'event_type_op';
 $handler->display->display_options['filters']['event_type']['expose']['identifier'] = 'event_type';
 $handler->display->display_options['filters']['event_type']['expose']['remember_roles'] = array(
-2 => '2',
-1 => 0,
-3 => 0,
-4 => 0,
+  2 => '2',
+  1 => 0,
+  3 => 0,
+  4 => 0,
 );
+/* Filter criterion: CiviCRM Events: Include Template */
+$handler->display->display_options['filters']['is_template']['id'] = 'is_template';
+$handler->display->display_options['filters']['is_template']['table'] = 'civicrm_event';
+$handler->display->display_options['filters']['is_template']['field'] = 'is_template';
+$handler->display->display_options['filters']['is_template']['value'] = '0';
 
 /* Display: Overview */
 $handler = $view->new_display('page', 'Overview', 'page');
