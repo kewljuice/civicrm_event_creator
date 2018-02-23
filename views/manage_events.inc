@@ -85,6 +85,12 @@ $handler->display->display_options['fields']['nothing']['table'] = 'views';
 $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
 $handler->display->display_options['fields']['nothing']['label'] = 'Manage';
 $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="/admin/events/edit/[id]">Edit event</a>';
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+$handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+$handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing_1']['label'] = 'Participants';
+$handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<a href=\'/admin/events/participants/[id]\'>Overview</a>';
 /* Sort criterion: CiviCRM Events: Start Date */
 $handler->display->display_options['sorts']['start_date']['id'] = 'start_date';
 $handler->display->display_options['sorts']['start_date']['table'] = 'civicrm_event';
