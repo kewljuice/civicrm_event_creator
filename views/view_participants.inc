@@ -45,7 +45,7 @@ $handler->display->display_options['empty']['area']['id'] = 'area';
 $handler->display->display_options['empty']['area']['table'] = 'views';
 $handler->display->display_options['empty']['area']['field'] = 'area';
 $handler->display->display_options['empty']['area']['empty'] = TRUE;
-$handler->display->display_options['empty']['area']['content'] = 'No results';
+$handler->display->display_options['empty']['area']['content'] = 'No results, return to <a href="/admin/events/manage">overview</a>';
 $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
 /* Field: CiviCRM Participants: Participant ID */
 $handler->display->display_options['fields']['id']['id'] = 'id';
